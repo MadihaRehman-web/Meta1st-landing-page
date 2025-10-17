@@ -1,0 +1,108 @@
+.security-cultures {
+    font-family: $primary-font;
+    padding-inline: 4rem;
+    margin-top: 7rem;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: -11.313rem;
+        left: 0rem;
+        background: url("./assets/security-culture-ellipse/Ellipse\ \(3\).png") no-repeat left / cover;
+        width: 22rem;
+        height: 26.563rem;
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: -4.313rem;
+        right: 0rem;
+        background: url("./assets/security-culture-ellipse/Ellipse\ \(4\).png") no-repeat right / cover;
+        width: 20.5rem;
+        height: 47.5rem;
+    }
+
+    .sec-heading {
+        font-family: $primary-font;
+        font-weight: 600;
+        color: $primary-color;
+        font-size: 2.5rem;
+        text-align: center;
+    } 
+
+    .sec-cards {
+        background-color: rgba(62, 60, 60, 0.3);
+        border-radius: 20px;
+        margin-top: 2.625rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        align-items: stretch;
+        padding: 4rem;        
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 36.6%;
+            border-radius: 20px;
+            padding: 2rem;
+            min-height: 21.375rem;
+            color: $primary-color;
+            background: rgba(142, 141, 141, 0.1);
+            text-align: center;
+            transition: all 1s ease;
+
+            &:hover {
+                box-shadow: 0px 0px 9px 4px white;
+                transform: translateY(-4px);
+            }
+
+            img {
+                height: 8rem;
+                width: 8rem;
+            }
+
+            .heading {
+                @include fonts-line(700, 1.25rem, 1.125rem);
+            }
+
+            .content {
+                @include fonts-line(300, 0.75rem, 1.125rem);
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        padding-inline: 2rem; 
+        .sec-cards {
+            flex-direction: column;
+            gap: 2rem;
+
+            div {
+                width: 100%;
+                min-height: 18.375rem;
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        padding-inline: 2rem;
+        .sec-cards {
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    @media (max-width: 570px) {
+       .sec-heading {
+        font-size: 1.5rem;
+    } 
+    }
+
+}

@@ -1,0 +1,124 @@
+.hero-section {
+    position: relative;
+    z-index: 0;
+    font-family: $primary-font;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    margin-top: 6rem;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 4rem;
+        left: 0rem;
+        background: url("./assets/hero-section-ellipse/Ellipse\ \(2\).png") no-repeat left/cover;
+        width: 22rem;
+        height: 35.563rem;
+    }
+
+    .hero-content {
+        width: 43%;
+        .hero-heading {
+            @include fonts-line(400, 3rem, 3.5rem);
+            color: $primary-color;
+            font-family: $primary-font;
+    
+            span {
+                color: #FF2CEAC7;
+            }
+        }
+    
+        .hero-discription {
+            color:$primary-color;
+            margin-block: 2.1rem;
+            font-size: 1.25rem;
+        }
+    
+        .hero-btn {
+            width: 65%;
+            @extend %button;
+        } 
+    }
+
+
+    .hero-img {
+        position: relative;
+        
+        .circle {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: cover;
+        }
+
+        .circle1 {
+            background-image: url("./assets/hero-section-ellipse/circle-ellipse-1.png");
+            width: 13.5rem;
+            height: 7.5rem;
+            right: 0rem;
+            top: 1.437rem;
+        }
+
+        .circle2 {
+            background-image: url("./assets/hero-section-ellipse/circle-ellipse-2.png");
+            width: 6.688rem;
+            height: 1.938rem;
+            left: 1.875rem;
+            top: 1.125rem;
+        }
+
+        .circle3 {
+            background-image: url("./assets/hero-section-ellipse/circle-ellipse-3.png");
+            width: 6.5rem;
+            height: 4.5rem;
+            left: 0rem;
+            top: 5.813rem;
+        }
+
+        .circle4 {
+            background-image: url("./assets/hero-section-ellipse/circle-ellipse-4.png");
+            width: 4.063rem;
+            height: 1.188rem;
+            left: -2.188rem;
+            bottom: 6rem;
+        }
+    }
+
+    @media (max-width: 1180px) {
+        padding-inline: 3rem;
+            .hero-content {
+            width: 55%;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        padding-inline: 5rem;
+            .hero-content {
+            width: 100%;
+            .hero-btn {
+                width: 70%;
+                @extend %button;
+            } 
+        }
+
+        .hero-img {
+            display: none;
+        }
+    }
+
+    @media (max-width: 720px) {
+        padding-inline: 3rem;
+    }
+
+    @media (max-width: 550px) {
+        padding-inline: 1rem;
+    }
+    
+}
+
+
+
+
+

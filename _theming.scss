@@ -1,0 +1,32 @@
+$primary-color: #FFFFFF;
+$secondary-color: #FFFFFFB2;
+$primary-font: 'Kanit', sans-serif;
+
+%button {
+    font-family: $primary-font;
+    font-size: 1.25rem;
+    outline: none;
+    cursor: pointer;
+    color: $primary-color;
+    padding: 8px 5rem 8px 5rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: linear-gradient(black) padding-box,
+    linear-gradient(to right, #5422BE, #E087FD) border-box;
+    transition: all 0.5s ease;
+
+    &:hover {
+        box-shadow: 0px 0px 8px 7px #5422BE;
+    }
+
+    @media (max-width: 370px) {
+        font-size: 1rem;
+    }
+}
+
+@mixin fonts-line($weight : 0, $size : 1rem, $height : normal) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+

@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: black;
+    width: 100%;
+}
+
+@import "theming";
+@import "risk";
+@import "header";
+@import "footer";
+@import "products";
+@import "location";
+@import "hero-section";
+@import "courses-section.scss";
+@import "security-cultures-section";
+
+// @media (max-width: 1500px) {
+//     *::before, *::after {
+//         display: none;
+//     }
+
+//     .fa-solid::before {
+//         display: inline-block;
+//     }
+// }
+

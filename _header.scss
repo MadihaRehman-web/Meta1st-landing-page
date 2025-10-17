@@ -1,0 +1,156 @@
+.header {
+        height: 6rem;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 4rem;
+        font-size: 0.875rem;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        background-color: black;
+    
+        // &::before {
+        //     content: " ";
+        //     position: fixed;
+        //     top: 0;
+        //     right: 0;
+        //     background: url("./assets/header-ellipse/Ellipse\ \(1\).png") no-repeat top right/contain;
+        //     width: 48.5rem;
+        //     height: 48.5rem;
+        //     z-index: -1;
+        // }
+    
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            font-size: 1rem;
+    
+            li {
+                list-style: none;
+                a {
+                    color: $secondary-color;
+                    text-decoration: none;
+            
+                    // &::after {
+                    //     content: '';
+                    //     position: absolute;
+                    //     z-index: 1;
+                    //     width: 50px;
+                    //     height: 5px;
+                    //     background: rgba(255,44,234,.7803921569);
+                    //     border-radius: 50%;
+                    // }    
+
+                    &:hover {
+                        color: #FF2CEAC7;
+                    }
+
+                    &:focus {
+                        border-bottom: 3px solid #FF2CEAC7;
+                        color: #FF2CEAC7;
+                        padding-bottom: 1rem;
+                    }
+                } 
+
+            }
+        }
+    
+        .header-btns {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+    
+            .log-in {
+                color: $secondary-color;
+
+                &:hover {
+                    cursor: default;
+                }
+            }
+    
+            .sign-up {
+                height: 1.8rem;
+                width: 4.688rem;
+                border: 1px solid white;
+                color: $secondary-color;
+                border-radius: 6px;
+                background: transparent;
+                padding: 0.25rem 0.875rem 0.25rem 0.875rem;
+                cursor: pointer;
+            }
+
+            .fa-bars {
+                color: white;
+                font-size: 2rem;
+                display: none;
+                cursor: pointer;
+            }
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: fixed;
+            z-index: 2;
+            padding-left: 3rem;
+            padding-top: 6rem;
+            top: 0px;
+            left: 0px;
+            height: 100vh;
+            width: 17rem;
+            background-color: black;
+
+            li {
+                list-style: none;
+                a {
+                    color: white;
+                    font-family: $primary-font;
+                    text-decoration: none;
+                }
+            }
+        }
+    
+        @media(max-width: 1150px) {
+            padding-inline: 2rem;
+        }
+    
+        @media(max-width: 1050px) {
+            .nav-list {
+                display: none;
+            }
+
+            .header-btns {
+                .fa-bars {
+                display: block;
+            }
+        }
+        }
+
+        @media(max-width: 600px) {
+            padding-inline: 1rem;
+            .logo {
+                width: 90px;
+            }
+
+            .header-btns {
+                .fa-bars {
+                font-size: 1.5rem;
+            }
+
+            .sign-up {
+                width: 4rem;
+                padding: 0.25rem 0.4rem 0.25rem 0.4rem;
+            }
+
+            .theme {
+                width: 55px;
+            }
+
+        }
+    }
+
+}
+
