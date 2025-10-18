@@ -4,10 +4,42 @@
     padding: 0;
 }
 
-html, body {
-    background-color: black;
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #FFFFFFB2;
+    --primary-font: 'Kanit', sans-serif;
+    --body-color: black;
+    --sec-card-container: rgba(62, 60, 60, 0.3);
+    --sec-card: rgba(142, 141, 141, 0.1);
+    --risk-container: rgba(0,0,0,0.3);
+    --product-card: #B305E733;
+}
+
+body {
+    background-color: var(--body-color);
     width: 100%;
 }
+
+.light-mode {
+    --body-color: white;
+    --primary-color: black;
+    --secondary-color: black;
+    --sec-card-container: rgb(246, 243, 255);
+    --risk-container: rgb(246, 243, 255, 0.3);
+    --sec-card: white;
+    --product-card: rgb(246, 243, 255);
+}
+
+.dark-mode {
+    --body-color: black;
+    --primary-color: #FFFFFF;
+    --secondary-color: #FFFFFFB2;
+    --sec-card-container: rgba(62, 60, 60, 0.3);
+    --sec-card: rgba(142, 141, 141, 0.1);
+    --risk-container: rgba(0,0,0,0.3);
+    --product-card: #B305E733;
+}
+
 
 @import "theming";
 @import "risk";

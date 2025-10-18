@@ -1,6 +1,6 @@
 .risk-section {
-    font-family: $primary-font;
-    color: $primary-color;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
     padding-inline: 5rem;
     margin-top: 9rem;
     position: relative;
@@ -11,7 +11,7 @@
         content: " ";
         position: absolute;
         z-index: -1;
-        top: -12.5rem;
+        top: -7.5rem;
         left: 0rem;
         background: url("./assets/risk-ellipse/Ellipse\ \(5\).png") no-repeat left / contain;
         width: 47.5rem;
@@ -19,18 +19,19 @@
     }
     &::after {
         content: " ";
+
         position: absolute;
         z-index: -1;
-        top: -15.563rem;
-        left: 0rem;
+        top: -10.563rem;
+        left: -7.563rem;
         background: url("./assets/risk-ellipse/Ellipse\ \(6\).png") no-repeat left / cover;
-        width: 47.5rem;
-        height: 58.625rem;
+        width: 32rem;
+        height: 49rem;
     }
 
     .risk-outer-container {
         border-radius: 40px;
-        background-color: rgba(0,0,0,0.3);
+        background-color: var(--risk-container);
         display: flex;
         gap: 2rem;
         align-items: center;
@@ -46,7 +47,7 @@
     }
 
     .risk-graph {
-        width: 50%;
+        width: 60%;
         img {
             width: 100%;
         }
@@ -98,7 +99,7 @@
         width: 22rem;
     }
     &::after {
-        width: 22rem;
+        width: 25rem;
     }
         
         .risk-outer-container {
@@ -115,8 +116,10 @@
         }
     }
 
-    @media(max-width: 550px) {
+    @media(max-width: 600px) {
+        padding-inline: 2rem;
         .risk-outer-container {
+            padding-inline: 1rem;
             .risk-heading {        
                 div {
                     @include fonts-line($size:1.5rem);

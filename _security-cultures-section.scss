@@ -1,5 +1,5 @@
 .security-cultures {
-    font-family: $primary-font;
+    font-family: var(--primary-font);
     padding-inline: 4rem;
     margin-top: 7rem;
     position: relative;
@@ -9,18 +9,18 @@
         content: " ";
         position: absolute;
         z-index: -1;
-        top: -11.313rem;
+        top: -5.313rem;
         left: 0rem;
         background: url("./assets/security-culture-ellipse/Ellipse\ \(3\).png") no-repeat left / cover;
-        width: 22rem;
-        height: 26.563rem;
+        width: 21rem;
+        height: 28.563rem;
     }
 
     &::after {
         content: " ";
         position: absolute;
         z-index: -1;
-        top: -4.313rem;
+        top: -3.313rem;
         right: 0rem;
         background: url("./assets/security-culture-ellipse/Ellipse\ \(4\).png") no-repeat right / cover;
         width: 20.5rem;
@@ -28,15 +28,15 @@
     }
 
     .sec-heading {
-        font-family: $primary-font;
+        font-family: var(--primary-font);
         font-weight: 600;
-        color: $primary-color;
+        color: var(--primary-color);
         font-size: 2.5rem;
         text-align: center;
     } 
 
     .sec-cards {
-        background-color: rgba(62, 60, 60, 0.3);
+        background-color: var(--sec-card-container);
         border-radius: 20px;
         margin-top: 2.625rem;
         display: flex;
@@ -54,13 +54,13 @@
             border-radius: 20px;
             padding: 2rem;
             min-height: 21.375rem;
-            color: $primary-color;
-            background: rgba(142, 141, 141, 0.1);
+            color: var(--primary-color);
+            background: var(--sec-card);
             text-align: center;
             transition: all 1s ease;
 
             &:hover {
-                box-shadow: 0px 0px 9px 4px white;
+                box-shadow: 0px 0px 9px 4px var(--primary-color);
                 transform: translateY(-4px);
             }
 

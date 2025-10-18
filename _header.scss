@@ -9,7 +9,7 @@
         position: sticky;
         top: 0px;
         z-index: 1;
-        background-color: black;
+        background-color: var(--body-color);
     
         // &::before {
         //     content: " ";
@@ -30,7 +30,7 @@
             li {
                 list-style: none;
                 a {
-                    color: $secondary-color;
+                    color: var(--primary-color);
                     text-decoration: none;
             
                     // &::after {
@@ -61,10 +61,80 @@
             display: flex;
             align-items: center;
             gap: 0.625rem;
-    
-            .log-in {
-                color: $secondary-color;
 
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 70px;
+                height: 27px;
+
+                input {
+                    visibility: hidden;
+                }
+
+                .slider {
+                    position: absolute;
+                    background-image: linear-gradient(
+                        135deg,
+                        #8aaff1 10%,
+                        #f9c290 50%,
+                        #e4ba17 100%
+                    );
+            
+                    background-size: 100% 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 34px;
+                }
+
+                .slider::before {
+                    position: absolute;
+                    content: "";
+                    height: 20px;
+                    width: 20px;
+                    right: 5px;
+                    bottom: 4px;
+                    background-color: white;
+                    border-radius: 34px;
+                    transition: 1s;
+                }
+  
+                .slider::after {
+                    content: "";
+                    position: absolute;
+                    height: 11px;
+                    width: 11px;
+                    left: 9px;
+                    top: 6px;
+                    background-color: rgb(249, 249, 153);
+                    box-shadow: 0px 0px 8px 1px rgb(244, 244, 112);
+                    border-radius: 34px;
+                    transition: 1s;
+                }
+  
+                input:checked + .slider {
+                    background-image: linear-gradient(
+                        135deg,
+                        #c33764 20%,
+                        #002746 60%,
+                        #1d2671 20%
+                    );
+                }
+  
+                input:checked + .slider:after {
+                    transform: translateX(37px);
+                    background-color: white;
+                }
+  
+                input:checked + .slider:before {
+                    transform: translateX(-41px);
+                }
+            }
+
+            .log-in {
+                color: var(--primary-color);
                 &:hover {
                     cursor: default;
                 }
@@ -73,8 +143,8 @@
             .sign-up {
                 height: 1.8rem;
                 width: 4.688rem;
-                border: 1px solid white;
-                color: $secondary-color;
+                border: 1px solid var(--primary-color);
+                color: var(--primary-color);
                 border-radius: 6px;
                 background: transparent;
                 padding: 0.25rem 0.875rem 0.25rem 0.875rem;
@@ -82,7 +152,7 @@
             }
 
             .fa-bars {
-                color: white;
+                color: var(--primary-color);
                 font-size: 2rem;
                 display: none;
                 cursor: pointer;
@@ -107,7 +177,7 @@
                 list-style: none;
                 a {
                     color: white;
-                    font-family: $primary-font;
+                    font-family: var(--primary-font);
                     text-decoration: none;
                 }
             }

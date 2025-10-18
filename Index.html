@@ -15,7 +15,7 @@
     <title>Landing page</title>
   </head>
 
-  <body>
+  <body class="dark-mode">
     <header class="header">
       <img class="logo" src="./assets/Logo.png" alt="meta-logo" />
 
@@ -32,7 +32,10 @@
 
       <div class="header-btns">
         <div>
-          <img src="./assets/theme.png" alt="theme-img" class="theme" />
+          <label for="toggleSwitch" class="switch">
+            <input type="checkbox" id="toggleSwitch" />
+            <span class="slider"></span>
+          </label>
         </div>
         <p class="log-in">Log In</p>
         <button class="sign-up">Sign up</button>

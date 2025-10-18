@@ -1,7 +1,7 @@
 .hero-section {
     position: relative;
     z-index: 0;
-    font-family: $primary-font;
+    font-family: var(--primary-font);
     display: flex;
     justify-content: space-between;
     padding-inline: 5rem;
@@ -22,8 +22,8 @@
         width: 43%;
         .hero-heading {
             @include fonts-line(400, 3rem, 3.5rem);
-            color: $primary-color;
-            font-family: $primary-font;
+            color: var(--primary-color);
+            font-family: var(--primary-font);
     
             span {
                 color: #FF2CEAC7;
@@ -31,7 +31,7 @@
         }
     
         .hero-discription {
-            color:$primary-color;
+            color:var(--primary-color);
             margin-block: 2.1rem;
             font-size: 1.25rem;
         }
@@ -63,8 +63,8 @@
 
         .circle2 {
             background-image: url("./assets/hero-section-ellipse/circle-ellipse-2.png");
-            width: 6.688rem;
-            height: 1.938rem;
+            width: 7rem;
+            height: 2.3rem;
             left: 1.875rem;
             top: 1.125rem;
         }
