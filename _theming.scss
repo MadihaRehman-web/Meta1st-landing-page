@@ -22,6 +22,14 @@
     }
 }
 
+%menu-bar {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: var(--primary-color);
+    margin: 6px 0;
+    border-radius: 2px;
+}
+
 @mixin fonts-line($weight : 0, $size : 1rem, $height : normal) {
     font-weight: $weight;
     font-size: $size;

@@ -31,17 +31,7 @@
                 list-style: none;
                 a {
                     color: var(--primary-color);
-                    text-decoration: none;
-            
-                    // &::after {
-                    //     content: '';
-                    //     position: absolute;
-                    //     z-index: 1;
-                    //     width: 50px;
-                    //     height: 5px;
-                    //     background: rgba(255,44,234,.7803921569);
-                    //     border-radius: 50%;
-                    // }    
+                    text-decoration: none;  
 
                     &:hover {
                         color: #FF2CEAC7;
@@ -106,8 +96,8 @@
                     position: absolute;
                     height: 11px;
                     width: 11px;
-                    left: 9px;
-                    top: 6px;
+                    left: 8px;
+                    top: 5px;
                     background-color: rgb(249, 249, 153);
                     box-shadow: 0px 0px 8px 1px rgb(244, 244, 112);
                     border-radius: 34px;
@@ -124,7 +114,7 @@
                 }
   
                 input:checked + .slider:after {
-                    transform: translateX(37px);
+                    transform: translateX(43px);
                     background-color: white;
                 }
   
@@ -151,15 +141,42 @@
                 cursor: pointer;
             }
 
-            .fa-bars {
-                color: var(--primary-color);
-                font-size: 2rem;
-                display: none;
+            .menu-bars {
                 cursor: pointer;
+                display: none;
+
+                .bar1 {
+                    @extend %menu-bar;
+                    transition: .4s;
+                }
+
+                .bar3 {
+                    @extend %menu-bar;
+                    transition: .4s;
+                }
+
+                .bar2 {
+                    @extend %menu-bar;;
+                }
+            }
+
+            .change {
+                .bar1 {
+                    transform: rotate(-45deg) translate(-7px, 9px);
+                }
+
+                .bar2 {
+                    visibility: hidden;
+                }
+
+                .bar3 {
+                    transform: rotate(45deg) translate(-5px, -9px);
+                }
+
             }
         }
 
-        .hamburger {
+        .hidden-slidebar {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
@@ -193,20 +210,19 @@
             }
 
             .header-btns {
-                .fa-bars {
+                .menu-bars {
                 display: block;
             }
         }
         }
 
         @media(max-width: 600px) {
-            padding-inline: 1rem;
             .logo {
                 width: 90px;
             }
 
             .header-btns {
-                .fa-bars {
+                .menu-bars {
                 font-size: 1.5rem;
             }
 
